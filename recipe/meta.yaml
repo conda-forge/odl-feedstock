@@ -1,5 +1,5 @@
 {% set name = "odl" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/odlgroup/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: dec092ce1f152707d821146046d4d1441672ad6c22d28dd46e1f77d79c210a38
+  sha256: 67773cf53def1f9de1b53d9c4b457d36023790178aa131da495ab1f25ef08911
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ requirements:
 
 test:
   requires:
-    - pytest >=5.4
+    - pytest >=5.4, <8.0
   imports:
     - odl
   commands:
