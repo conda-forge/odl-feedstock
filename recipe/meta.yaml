@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools >=65.6
 
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - setuptools <76.0
     - future >=0.16
     - numpy >=1.19, <1.27
@@ -32,6 +32,7 @@ requirements:
 test:
   requires:
     - pytest >=5.4, <8.0
+    - python {{ python_min }}
   imports:
     - odl
   commands:
