@@ -1,5 +1,5 @@
 {% set name = "odl" %}
-{% set version = "0.8.3" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/odlgroup/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 76c1dcfb4ddca77e66144393115d312ca1731d928b2566a86b88972fa47e9616
+  sha256: 2e8b403f21754ec53c2c395db34221f5816fbfb766ffb0a04f603b66d448db96
 
 build:
   noarch: python
